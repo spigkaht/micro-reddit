@@ -1,24 +1,25 @@
-# README
+Users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  username:string [unique, 4-12 chars, present]
+  email:string [unique, present]
+  password:string [6-16 chars, present]
+  id:integer
+  created_at:datetime
+  updated_at:datetime
 
-Things you may want to cover:
+  has_many posts
 
-* Ruby version
 
-* System dependencies
+Posts
 
-* Configuration
+  title:string [unique, present]
+  body:text [present]
+  author_id:integer [present]
+  id:integer
+  created_at:datetime
+  updated_at:datetime
 
-* Database creation
+  belongs_to user
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Comments
